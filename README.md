@@ -1,10 +1,16 @@
-# 📡 VLAN & Inter-VLAN Routing Lab (Cisco Packet Tracer)
+# VLAN & Inter-VLAN Routing Lab (Cisco Packet Tracer)
 
 This lab demonstrates how to segment a network using VLANs and enable communication between them using **Inter-VLAN Routing** via subinterfaces on a router.
 
----
+## Skills Demonstrated
+- VLAN configuration
+- Subinterface setup
+- Trunking
+- Inter-VLAN routing
+- Basic troubleshooting
 
-## 🧰 Tools Used
+
+## Tools Used
 
 - Cisco Packet Tracer
 - 2960 Switch
@@ -13,7 +19,7 @@ This lab demonstrates how to segment a network using VLANs and enable communicat
 
 ---
 
-## 🖥️ Network Design
+## Network Design
 
 | VLAN | Name  | IP Range         | Default Gateway   |
 |------|-------|------------------|-------------------|
@@ -78,5 +84,17 @@ Reply from 192.168.20.10: bytes=32 time<1ms TTL=255
 Reply from 192.168.20.10: bytes=32 time<1ms TTL=255
 
 
+## Network Design
+- Switchport Trunking Enabled
+- Router uses router-on-a-stick setup for inter-VLAN routing
+
+## Successful Tests
+- PC1 and PC2 can ping their respective gateways
+- Inter-VLAN communication works via the router
+
+##  Files Included
+- `VLAN-InterVLAN-Routing-Lab.pkt`
+- `RouterConfig.txt`
+- `SwitchConfig.txt`
 
 
