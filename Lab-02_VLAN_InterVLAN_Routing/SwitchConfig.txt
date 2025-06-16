@@ -1,0 +1,85 @@
+! Switch1 Configuration
+
+enable
+configure terminal
+
+! Create VLANs
+vlan 10
+ name VLAN10
+exit
+vlan 20
+ name VLAN20
+exit
+
+! Assign ports to VLAN 10
+interface fastEthernet0/1
+ switchport mode access
+ switchport access vlan 10
+exit
+interface fastEthernet0/2
+ switchport mode access
+ switchport access vlan 10
+exit
+
+! Assign ports to VLAN 20
+interface fastEthernet0/3
+ switchport mode access
+ switchport access vlan 20
+exit
+interface fastEthernet0/4
+ switchport mode access
+ switchport access vlan 20
+exit
+
+! Configure trunk ports
+interface fastEthernet0/23
+ switchport mode trunk
+exit
+interface fastEthernet0/24
+ switchport mode trunk
+exit
+
+end
+write memory
+
+
+! Switch2 Configuration
+
+enable
+configure terminal
+
+! Create VLANs
+vlan 10
+ name VLAN10
+exit
+vlan 20
+ name VLAN20
+exit
+
+! Assign ports to VLAN 10
+interface fastEthernet0/1
+ switchport mode access
+ switchport access vlan 10
+exit
+interface fastEthernet0/2
+ switchport mode access
+ switchport access vlan 10
+exit
+
+! Assign ports to VLAN 20
+interface fastEthernet0/3
+ switchport mode access
+ switchport access vlan 20
+exit
+interface fastEthernet0/4
+ switchport mode access
+ switchport access vlan 20
+exit
+
+! Configure trunk port
+interface fastEthernet0/24
+ switchport mode trunk
+exit
+
+end
+write memory
